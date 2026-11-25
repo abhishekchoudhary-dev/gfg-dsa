@@ -1,11 +1,11 @@
 # Problem: Repeated pattern check
-# Difficulty: Medium
-# Link: https://www.geeksforgeeks.org/shortest-unique-prefix-for-every-word/minimum-jumps/1
-# Time Complexity: O(nxL) - where we have n strings and L is the avg length
-# Space Complexity: O(nxL)
-# Approach: We make a trie and instead of trie just giving prefix added a counter to each node 
-# to see how many strings pass through it. then we only take the nodes where the count is 1
-
+# Difficulty: Easy
+# Link: https://www.geeksforgeeks.org/shortest-unique-prefix-for-every-word/repeated-pattern-check/1
+# Time Complexity: O(n)
+# Space Complexity: O(n) as we use a stack
+# Approach: We need to basically make groups with the maximum run and then loop over the groups 
+# and check if its same as previous group and based on count just pop the stack. If at the end the stack is empty
+# then that means that all groups are balanced
 
 class Solution:
     def findPattern(self, s):
